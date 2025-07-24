@@ -95,7 +95,7 @@ if len(BOT_TOKEN) == 0:
 
 bot_id = BOT_TOKEN.split(":", 1)[0]
 
-DATABASE_URL = environ.get("DATABASE_URL", "")
+DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://youyooou8:SZSe2ESMc0T8IpLj@cluster0.dpq1fyv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ""
 
@@ -134,25 +134,25 @@ if DATABASE_URL:
     conn.close()
     BOT_TOKEN = environ.get("BOT_TOKEN", "")
     bot_id = BOT_TOKEN.split(":", 1)[0]
-    DATABASE_URL = environ.get("DATABASE_URL", "")
+    DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://youyooou8:SZSe2ESMc0T8IpLj@cluster0.dpq1fyv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 else:
     config_dict = {}
 
-OWNER_ID = environ.get("OWNER_ID", "")
+OWNER_ID = environ.get("OWNER_ID", "7181944051")
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
     exit(1)
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get("TELEGRAM_API", "")
+TELEGRAM_API = environ.get("TELEGRAM_API", "26607057")
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
     exit(1)
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "")
+TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "10b42634777101b573f915b5d19cc971")
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
@@ -219,14 +219,14 @@ if len(EXTENSION_FILTER) > 0:
         x = x.lstrip(".")
         GLOBAL_EXTENSION_FILTER.append(x.strip().lower())
 
-LINKS_LOG_ID = environ.get("LINKS_LOG_ID", "")
+LINKS_LOG_ID = environ.get("LINKS_LOG_ID", "-1002705943940")
 LINKS_LOG_ID = "" if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 
-MIRROR_LOG_ID = environ.get("MIRROR_LOG_ID", "")
+MIRROR_LOG_ID = environ.get("MIRROR_LOG_ID", "-1002705943940")
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ""
 
-LEECH_LOG_ID = environ.get("LEECH_LOG_ID", "")
+LEECH_LOG_ID = environ.get("LEECH_LOG_ID", "-1002705943940")
 if len(LEECH_LOG_ID) == 0:
     LEECH_LOG_ID = ""
 
